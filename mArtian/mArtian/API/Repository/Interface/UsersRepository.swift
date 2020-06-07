@@ -8,7 +8,7 @@
 
 import RxSwift
 
-protocol UserRepository {
+protocol UsersRepository {
     func fetchUsers(withUserParams params: [String: String]?) -> Observable<ApiResult<[User], ApiError>>
 }
 
