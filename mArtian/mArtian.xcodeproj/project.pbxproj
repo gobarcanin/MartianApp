@@ -34,6 +34,9 @@
 		42CD0515248D124200ED0C80 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0514248D124200ED0C80 /* UrlBuilder.swift */; };
 		42CD0517248D13BE00ED0C80 /* DefaultPostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0516248D13BE00ED0C80 /* DefaultPostsRepository.swift */; };
 		42CD051C248D140E00ED0C80 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD051B248D140E00ED0C80 /* Post.swift */; };
+		42CD0521248D14D900ED0C80 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0520248D14D900ED0C80 /* Comments.swift */; };
+		42CD0523248D192500ED0C80 /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0522248D192500ED0C80 /* CommentsRepository.swift */; };
+		42CD0525248D19BF00ED0C80 /* DefaultCommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0524248D19BF00ED0C80 /* DefaultCommentsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,9 @@
 		42CD0514248D124200ED0C80 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		42CD0516248D13BE00ED0C80 /* DefaultPostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPostsRepository.swift; sourceTree = "<group>"; };
 		42CD051B248D140E00ED0C80 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		42CD0520248D14D900ED0C80 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		42CD0522248D192500ED0C80 /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		42CD0524248D19BF00ED0C80 /* DefaultCommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCommentsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		42CD04DF248C42D200ED0C80 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				42CD051F248D14D900ED0C80 /* Comments */,
 				42CD051A248D140E00ED0C80 /* Post */,
 				42CD04E9248C440100ED0C80 /* User */,
 			);
@@ -163,6 +170,7 @@
 			children = (
 				42CD04FC248C461900ED0C80 /* UserRepository.swift */,
 				42CD050D248D0F5800ED0C80 /* PostsRepository.swift */,
+				42CD0522248D192500ED0C80 /* CommentsRepository.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 			children = (
 				42CD0505248CC04000ED0C80 /* DefaultUserRepository.swift */,
 				42CD0516248D13BE00ED0C80 /* DefaultPostsRepository.swift */,
+				42CD0524248D19BF00ED0C80 /* DefaultCommentsRepository.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -199,6 +208,14 @@
 				42CD051B248D140E00ED0C80 /* Post.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		42CD051F248D14D900ED0C80 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				42CD0520248D14D900ED0C80 /* Comments.swift */,
+			);
+			path = Comments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +313,14 @@
 				42CD0507248CC04000ED0C80 /* DefaultUserRepository.swift in Sources */,
 				42CD0515248D124200ED0C80 /* UrlBuilder.swift in Sources */,
 				42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */,
+				42CD0523248D192500ED0C80 /* CommentsRepository.swift in Sources */,
 				42CD04F1248C445400ED0C80 /* Geo.swift in Sources */,
+				42CD0521248D14D900ED0C80 /* Comments.swift in Sources */,
 				42CD050C248CC24000ED0C80 /* ApiResources.swift in Sources */,
 				42CD04F3248C44A400ED0C80 /* Company.swift in Sources */,
 				42CD050E248D0F5800ED0C80 /* PostsRepository.swift in Sources */,
 				42CD051C248D140E00ED0C80 /* Post.swift in Sources */,
+				42CD0525248D19BF00ED0C80 /* DefaultCommentsRepository.swift in Sources */,
 				42CD04FD248C461900ED0C80 /* UserRepository.swift in Sources */,
 				42CD04F8248C457C00ED0C80 /* DefaultRepositoryFactory.swift in Sources */,
 				42CD0513248D0FA200ED0C80 /* Dictionary+UrlQueryItem.swift in Sources */,

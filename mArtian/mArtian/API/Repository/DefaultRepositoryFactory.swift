@@ -10,12 +10,18 @@ import Foundation
 
 protocol RepositoryFactory {
     var userRepository: UserRepository { get }
+    var postsRepository: PostsRepository { get }
+    var commentsRepository: CommentsRepository { get }
 }
 
 struct DefaultRepositoryFactory: RepositoryFactory {
     let userRepository: UserRepository
+    let postsRepository: PostsRepository
+    let commentsRepository: CommentsRepository
 
     init() {
         self.userRepository = DefaultUserRepository()
+        self.postsRepository = DefaultPostsRepository()
+        self.commentsRepository = DefaultCommentsRepository()
     }
 }
