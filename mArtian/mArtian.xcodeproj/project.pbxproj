@@ -19,6 +19,14 @@
 		42CD04D5248C3FC700ED0C80 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04D4248C3FC700ED0C80 /* Kingfisher */; };
 		42CD04D8248C3FE300ED0C80 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04D7248C3FE300ED0C80 /* RxFeedback */; };
 		42CD04DB248C403200ED0C80 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04DA248C403200ED0C80 /* RxOptional */; };
+		42CD04E6248C432500ED0C80 /* ApiParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04E5248C432500ED0C80 /* ApiParameter.swift */; };
+		42CD04EC248C440100ED0C80 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04EA248C440100ED0C80 /* Address.swift */; };
+		42CD04ED248C440100ED0C80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04EB248C440100ED0C80 /* User.swift */; };
+		42CD04F1248C445400ED0C80 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04F0248C445400ED0C80 /* Geo.swift */; };
+		42CD04F3248C44A400ED0C80 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04F2248C44A400ED0C80 /* Company.swift */; };
+		42CD04F8248C457C00ED0C80 /* DefaultRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04F7248C457C00ED0C80 /* DefaultRepositoryFactory.swift */; };
+		42CD04FD248C461900ED0C80 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04FC248C461900ED0C80 /* UserRepository.swift */; };
+		42CD04FF248C46CE00ED0C80 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04FE248C46CE00ED0C80 /* ApiResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +35,14 @@
 		42CD04BA248C3E1400ED0C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42CD04BD248C3E1400ED0C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42CD04BF248C3E1400ED0C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42CD04E5248C432500ED0C80 /* ApiParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiParameter.swift; sourceTree = "<group>"; };
+		42CD04EA248C440100ED0C80 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		42CD04EB248C440100ED0C80 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		42CD04F0248C445400ED0C80 /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		42CD04F2248C44A400ED0C80 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		42CD04F7248C457C00ED0C80 /* DefaultRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRepositoryFactory.swift; sourceTree = "<group>"; };
+		42CD04FC248C461900ED0C80 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		42CD04FE248C46CE00ED0C80 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiResult.swift; path = Common/ApiResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +84,68 @@
 		42CD04B0248C3E0E00ED0C80 /* mArtian */ = {
 			isa = PBXGroup;
 			children = (
+				42CD04DE248C42D200ED0C80 /* API */,
 				42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */,
 				42CD04BA248C3E1400ED0C80 /* Assets.xcassets */,
 				42CD04BC248C3E1400ED0C80 /* LaunchScreen.storyboard */,
 				42CD04BF248C3E1400ED0C80 /* Info.plist */,
 			);
 			path = mArtian;
+			sourceTree = "<group>";
+		};
+		42CD04DE248C42D200ED0C80 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				42CD04F6248C457C00ED0C80 /* Repository */,
+				42CD04E4248C432500ED0C80 /* Common */,
+				42CD04DF248C42D200ED0C80 /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		42CD04DF248C42D200ED0C80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42CD04E9248C440100ED0C80 /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42CD04E4248C432500ED0C80 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				42CD04E5248C432500ED0C80 /* ApiParameter.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		42CD04E9248C440100ED0C80 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				42CD04EA248C440100ED0C80 /* Address.swift */,
+				42CD04EB248C440100ED0C80 /* User.swift */,
+				42CD04F0248C445400ED0C80 /* Geo.swift */,
+				42CD04F2248C44A400ED0C80 /* Company.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		42CD04F6248C457C00ED0C80 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				42CD04FB248C461900ED0C80 /* Interface */,
+				42CD04F7248C457C00ED0C80 /* DefaultRepositoryFactory.swift */,
+				42CD04FE248C46CE00ED0C80 /* ApiResult.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		42CD04FB248C461900ED0C80 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				42CD04FC248C461900ED0C80 /* UserRepository.swift */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CD04ED248C440100ED0C80 /* User.swift in Sources */,
+				42CD04EC248C440100ED0C80 /* Address.swift in Sources */,
+				42CD04E6248C432500ED0C80 /* ApiParameter.swift in Sources */,
+				42CD04FF248C46CE00ED0C80 /* ApiResult.swift in Sources */,
 				42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */,
+				42CD04F1248C445400ED0C80 /* Geo.swift in Sources */,
+				42CD04F3248C44A400ED0C80 /* Company.swift in Sources */,
+				42CD04FD248C461900ED0C80 /* UserRepository.swift in Sources */,
+				42CD04F8248C457C00ED0C80 /* DefaultRepositoryFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
