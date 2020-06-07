@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+final class DefaultCommentsService: CommentsService {
+    private let commentsRepository: CommentsRepository
+    
+    init(commentsRepository: CommentsRepository) {
+        self.commentsRepository = commentsRepository
+    }
+}

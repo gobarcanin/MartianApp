@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+final class DefaultUsersService: UsersService {
+    private let usersRepository: UsersRepository
+    
+    init(usersRepository: UsersRepository) {
+        self.usersRepository = usersRepository
+    }
+}

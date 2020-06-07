@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+final class DefaultPostsService: PostsService {
+    private let postsRepository: PostsRepository
+    private let userService: UsersService
+
+    init(userService: UsersService,
+         postsRepository: PostsRepository) {
+        self.userService = userService
+        self.postsRepository = postsRepository
+    }
+}

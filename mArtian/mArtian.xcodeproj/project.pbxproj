@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425757C1248D25CE00ED6AD6 /* DefaultUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425757C0248D25CE00ED6AD6 /* DefaultUserRepository.swift */; };
+		425757C3248D286400ED6AD6 /* ApiAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425757C2248D286400ED6AD6 /* ApiAdapter.swift */; };
 		42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */; };
 		42CD04BB248C3E1400ED0C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BA248C3E1400ED0C80 /* Assets.xcassets */; };
 		42CD04BE248C3E1400ED0C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BC248C3E1400ED0C80 /* LaunchScreen.storyboard */; };
@@ -24,9 +26,8 @@
 		42CD04F1248C445400ED0C80 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04F0248C445400ED0C80 /* Geo.swift */; };
 		42CD04F3248C44A400ED0C80 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04F2248C44A400ED0C80 /* Company.swift */; };
 		42CD04F8248C457C00ED0C80 /* DefaultRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04F7248C457C00ED0C80 /* DefaultRepositoryFactory.swift */; };
-		42CD04FD248C461900ED0C80 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04FC248C461900ED0C80 /* UserRepository.swift */; };
+		42CD04FD248C461900ED0C80 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04FC248C461900ED0C80 /* UsersRepository.swift */; };
 		42CD0506248CC04000ED0C80 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0503248CC03F00ED0C80 /* ApiResult.swift */; };
-		42CD0507248CC04000ED0C80 /* DefaultUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0505248CC04000ED0C80 /* DefaultUserRepository.swift */; };
 		42CD050A248CC1D900ED0C80 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD0509248CC1D900ED0C80 /* RxAlamofire */; };
 		42CD050C248CC24000ED0C80 /* ApiResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD050B248CC24000ED0C80 /* ApiResources.swift */; };
 		42CD050E248D0F5800ED0C80 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD050D248D0F5800ED0C80 /* PostsRepository.swift */; };
@@ -43,9 +44,12 @@
 		42CD0537248D1FB100ED0C80 /* DefaultUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0536248D1FB100ED0C80 /* DefaultUserService.swift */; };
 		42CD0539248D1FC100ED0C80 /* DefaultCommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD0538248D1FC100ED0C80 /* DefaultCommentsService.swift */; };
 		42CD053B248D1FD300ED0C80 /* DefaultPostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD053A248D1FD300ED0C80 /* DefaultPostsService.swift */; };
+		42CD053D248D201700ED0C80 /* DefaultServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD053C248D201700ED0C80 /* DefaultServiceFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		425757C0248D25CE00ED6AD6 /* DefaultUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUserRepository.swift; sourceTree = "<group>"; };
+		425757C2248D286400ED6AD6 /* ApiAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAdapter.swift; sourceTree = "<group>"; };
 		42CD04AE248C3E0E00ED0C80 /* mArtian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mArtian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42CD04BA248C3E1400ED0C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,9 +61,8 @@
 		42CD04F0248C445400ED0C80 /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
 		42CD04F2248C44A400ED0C80 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		42CD04F7248C457C00ED0C80 /* DefaultRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRepositoryFactory.swift; sourceTree = "<group>"; };
-		42CD04FC248C461900ED0C80 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		42CD04FC248C461900ED0C80 /* UsersRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
 		42CD0503248CC03F00ED0C80 /* ApiResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
-		42CD0505248CC04000ED0C80 /* DefaultUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUserRepository.swift; sourceTree = "<group>"; };
 		42CD050B248CC24000ED0C80 /* ApiResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResources.swift; sourceTree = "<group>"; };
 		42CD050D248D0F5800ED0C80 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
 		42CD0512248D0FA200ED0C80 /* Dictionary+UrlQueryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+UrlQueryItem.swift"; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		42CD0536248D1FB100ED0C80 /* DefaultUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUserService.swift; sourceTree = "<group>"; };
 		42CD0538248D1FC100ED0C80 /* DefaultCommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCommentsService.swift; sourceTree = "<group>"; };
 		42CD053A248D1FD300ED0C80 /* DefaultPostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPostsService.swift; sourceTree = "<group>"; };
+		42CD053C248D201700ED0C80 /* DefaultServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultServiceFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +185,7 @@
 		42CD04FB248C461900ED0C80 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				42CD04FC248C461900ED0C80 /* UserRepository.swift */,
+				42CD04FC248C461900ED0C80 /* UsersRepository.swift */,
 				42CD050D248D0F5800ED0C80 /* PostsRepository.swift */,
 				42CD0522248D192500ED0C80 /* CommentsRepository.swift */,
 			);
@@ -193,6 +197,7 @@
 			children = (
 				42CD0503248CC03F00ED0C80 /* ApiResult.swift */,
 				42CD050B248CC24000ED0C80 /* ApiResources.swift */,
+				425757C2248D286400ED6AD6 /* ApiAdapter.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -200,7 +205,7 @@
 		42CD0504248CC04000ED0C80 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				42CD0505248CC04000ED0C80 /* DefaultUserRepository.swift */,
+				425757C0248D25CE00ED6AD6 /* DefaultUserRepository.swift */,
 				42CD0516248D13BE00ED0C80 /* DefaultPostsRepository.swift */,
 				42CD0524248D19BF00ED0C80 /* DefaultCommentsRepository.swift */,
 			);
@@ -236,6 +241,7 @@
 			children = (
 				42CD0535248D1FB100ED0C80 /* Implementation */,
 				42CD0529248D1F5800ED0C80 /* Interface */,
+				42CD053C248D201700ED0C80 /* DefaultServiceFactory.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -349,10 +355,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				42CD04ED248C440100ED0C80 /* User.swift in Sources */,
+				425757C3248D286400ED6AD6 /* ApiAdapter.swift in Sources */,
 				42CD04EC248C440100ED0C80 /* Address.swift in Sources */,
 				42CD04E6248C432500ED0C80 /* ApiParameter.swift in Sources */,
 				42CD0506248CC04000ED0C80 /* ApiResult.swift in Sources */,
-				42CD0507248CC04000ED0C80 /* DefaultUserRepository.swift in Sources */,
 				42CD0515248D124200ED0C80 /* UrlBuilder.swift in Sources */,
 				42CD0530248D1F7B00ED0C80 /* CommentsService.swift in Sources */,
 				42CD053B248D1FD300ED0C80 /* DefaultPostsService.swift in Sources */,
@@ -366,12 +372,14 @@
 				42CD051C248D140E00ED0C80 /* Post.swift in Sources */,
 				42CD0532248D1F8900ED0C80 /* PostsService.swift in Sources */,
 				42CD0525248D19BF00ED0C80 /* DefaultCommentsRepository.swift in Sources */,
-				42CD04FD248C461900ED0C80 /* UserRepository.swift in Sources */,
+				42CD04FD248C461900ED0C80 /* UsersRepository.swift in Sources */,
 				42CD052C248D1F5800ED0C80 /* UserService.swift in Sources */,
 				42CD0539248D1FC100ED0C80 /* DefaultCommentsService.swift in Sources */,
 				42CD04F8248C457C00ED0C80 /* DefaultRepositoryFactory.swift in Sources */,
+				42CD053D248D201700ED0C80 /* DefaultServiceFactory.swift in Sources */,
 				42CD0513248D0FA200ED0C80 /* Dictionary+UrlQueryItem.swift in Sources */,
 				42CD0537248D1FB100ED0C80 /* DefaultUserService.swift in Sources */,
+				425757C1248D25CE00ED6AD6 /* DefaultUserRepository.swift in Sources */,
 				42CD0517248D13BE00ED0C80 /* DefaultPostsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

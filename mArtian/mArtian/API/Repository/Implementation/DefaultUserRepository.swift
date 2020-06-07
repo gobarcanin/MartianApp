@@ -11,7 +11,7 @@ import Alamofire
 import RxAlamofire
 import RxSwift
 
-final class DefaultUserRepository: UserRepository {
+final class DefaultUsersRepository: UsersRepository {
     func fetchUsers(withUserParams params: [String: String]?) -> Observable<ApiResult<[User], ApiError>> {
         return SessionManager.default.rx
             .request(.get,
