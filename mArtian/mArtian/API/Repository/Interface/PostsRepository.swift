@@ -6,4 +6,8 @@
 //  Copyright © 2020 MartianAndMAchine. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+
+protocol PostsRepository {
+    func fetchPosts(withUserParams params: [String: String]?) -> Observable<ApiResult<[Post], ApiError>>
+}
