@@ -9,12 +9,13 @@
 import Foundation
 
 protocol RepositoryFactory {
-
+    var userRepository: UserRepository { get }
 }
 
 struct DefaultRepositoryFactory: RepositoryFactory {
+    let userRepository: UserRepository
 
     init() {
-
+        self.userRepository = DefaultUserRepository()
     }
 }

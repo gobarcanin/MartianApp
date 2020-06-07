@@ -6,7 +6,9 @@
 //  Copyright © 2020 MartianAndMAchine. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 protocol UserRepository {
+    func fetchUsers(withUserParams params: [String: String]?) -> Observable<ApiResult<[User], ApiError>>
 }
+
