@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		425757C1248D25CE00ED6AD6 /* DefaultUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425757C0248D25CE00ED6AD6 /* DefaultUserRepository.swift */; };
 		425757C3248D286400ED6AD6 /* ApiAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425757C2248D286400ED6AD6 /* ApiAdapter.swift */; };
+		426DD1B624925923002E3E66 /* MartianApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1B524925923002E3E66 /* MartianApi.swift */; };
 		42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */; };
 		42CD04BB248C3E1400ED0C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BA248C3E1400ED0C80 /* Assets.xcassets */; };
 		42CD04BE248C3E1400ED0C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BC248C3E1400ED0C80 /* LaunchScreen.storyboard */; };
@@ -50,6 +51,19 @@
 /* Begin PBXFileReference section */
 		425757C0248D25CE00ED6AD6 /* DefaultUserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUserRepository.swift; sourceTree = "<group>"; };
 		425757C2248D286400ED6AD6 /* ApiAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAdapter.swift; sourceTree = "<group>"; };
+		426DD1A7249035DF002E3E66 /* DispatchQueue+SafeAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+SafeAsync.swift"; sourceTree = "<group>"; };
+		426DD1A9249035DF002E3E66 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		426DD1AA249035DF002E3E66 /* AppRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRootViewController.swift; sourceTree = "<group>"; };
+		426DD1B124903659002E3E66 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		426DD1B324903667002E3E66 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		426DD1B524925923002E3E66 /* MartianApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartianApi.swift; sourceTree = "<group>"; };
+		426DD1B724925BE9002E3E66 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		426DD1BC2492604C002E3E66 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		426DD1BE24926084002E3E66 /* DefaultNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigator.swift; sourceTree = "<group>"; };
+		426DD1C42492632B002E3E66 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		426DD1C62492633A002E3E66 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		426DD1CB2492635C002E3E66 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		426DD1CD24926373002E3E66 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		42CD04AE248C3E0E00ED0C80 /* mArtian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mArtian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42CD04BA248C3E1400ED0C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +102,6 @@
 			files = (
 				42CD04CB248C3F6D00ED0C80 /* RxRelay in Frameworks */,
 				42CD04D8248C3FE300ED0C80 /* RxFeedback in Frameworks */,
-				42CD04C9248C3F6D00ED0C80 /* RxTest in Frameworks */,
 				42CD04D5248C3FC700ED0C80 /* Kingfisher in Frameworks */,
 				42CD04CD248C3F6D00ED0C80 /* RxCocoa in Frameworks */,
 				42CD04DB248C403200ED0C80 /* RxOptional in Frameworks */,
@@ -137,6 +150,7 @@
 				42CD0511248D0FA200ED0C80 /* Extension */,
 				42CD04DF248C42D200ED0C80 /* Models */,
 				42CD04F6248C457C00ED0C80 /* Repository */,
+				426DD1B524925923002E3E66 /* MartianApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -284,7 +298,6 @@
 			name = mArtian;
 			packageProductDependencies = (
 				42CD04C6248C3F6D00ED0C80 /* RxSwift */,
-				42CD04C8248C3F6D00ED0C80 /* RxTest */,
 				42CD04CA248C3F6D00ED0C80 /* RxRelay */,
 				42CD04CC248C3F6D00ED0C80 /* RxCocoa */,
 				42CD04CE248C3F6D00ED0C80 /* RxBlocking */,
@@ -361,6 +374,7 @@
 				42CD0506248CC04000ED0C80 /* ApiResult.swift in Sources */,
 				42CD0515248D124200ED0C80 /* UrlBuilder.swift in Sources */,
 				42CD0530248D1F7B00ED0C80 /* CommentsService.swift in Sources */,
+				426DD1B624925923002E3E66 /* MartianApi.swift in Sources */,
 				42CD053B248D1FD300ED0C80 /* DefaultPostsService.swift in Sources */,
 				42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */,
 				42CD0523248D192500ED0C80 /* CommentsRepository.swift in Sources */,
@@ -617,11 +631,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42CD04C5248C3F6D00ED0C80 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		42CD04C8248C3F6D00ED0C80 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42CD04C5248C3F6D00ED0C80 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		42CD04CA248C3F6D00ED0C80 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
