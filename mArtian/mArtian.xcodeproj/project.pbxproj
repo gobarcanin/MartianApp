@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		425757C1248D25CE00ED6AD6 /* DefaultUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425757C0248D25CE00ED6AD6 /* DefaultUserRepository.swift */; };
 		425757C3248D286400ED6AD6 /* ApiAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425757C2248D286400ED6AD6 /* ApiAdapter.swift */; };
+		426DD1AB249035DF002E3E66 /* DispatchQueue+SafeAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1A7249035DF002E3E66 /* DispatchQueue+SafeAsync.swift */; };
+		426DD1AC249035DF002E3E66 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1A9249035DF002E3E66 /* RootViewController.swift */; };
+		426DD1AD249035DF002E3E66 /* AppRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1AA249035DF002E3E66 /* AppRootViewController.swift */; };
+		426DD1B22490365A002E3E66 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1B124903659002E3E66 /* ViewControllerFactory.swift */; };
+		426DD1B424903667002E3E66 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1B324903667002E3E66 /* ViewModelFactory.swift */; };
 		426DD1B624925923002E3E66 /* MartianApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1B524925923002E3E66 /* MartianApi.swift */; };
+		426DD1B824925BE9002E3E66 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1B724925BE9002E3E66 /* RootViewModel.swift */; };
+		426DD1BD2492604C002E3E66 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1BC2492604C002E3E66 /* Navigator.swift */; };
+		426DD1BF24926084002E3E66 /* DefaultNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1BE24926084002E3E66 /* DefaultNavigator.swift */; };
+		426DD1C52492632B002E3E66 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1C42492632B002E3E66 /* PostsViewController.swift */; };
+		426DD1C72492633A002E3E66 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1C62492633A002E3E66 /* PostsViewModel.swift */; };
+		426DD1CC2492635C002E3E66 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1CB2492635C002E3E66 /* UsersViewController.swift */; };
+		426DD1CE24926373002E3E66 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1CD24926373002E3E66 /* UsersViewModel.swift */; };
 		42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */; };
 		42CD04BB248C3E1400ED0C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BA248C3E1400ED0C80 /* Assets.xcassets */; };
 		42CD04BE248C3E1400ED0C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BC248C3E1400ED0C80 /* LaunchScreen.storyboard */; };
 		42CD04C7248C3F6D00ED0C80 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04C6248C3F6D00ED0C80 /* RxSwift */; };
-		42CD04C9248C3F6D00ED0C80 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04C8248C3F6D00ED0C80 /* RxTest */; };
 		42CD04CB248C3F6D00ED0C80 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04CA248C3F6D00ED0C80 /* RxRelay */; };
 		42CD04CD248C3F6D00ED0C80 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04CC248C3F6D00ED0C80 /* RxCocoa */; };
 		42CD04CF248C3F6D00ED0C80 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 42CD04CE248C3F6D00ED0C80 /* RxBlocking */; };
@@ -114,6 +125,89 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426DD1A4249035DF002E3E66 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1C22492632B002E3E66 /* Modules */,
+				426DD1BB2492604C002E3E66 /* Navigator */,
+				426DD1B024903659002E3E66 /* Factory */,
+				426DD1A5249035DF002E3E66 /* Common */,
+				426DD1AA249035DF002E3E66 /* AppRootViewController.swift */,
+				426DD1B724925BE9002E3E66 /* RootViewModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		426DD1A5249035DF002E3E66 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1A6249035DF002E3E66 /* Extension */,
+				426DD1A8249035DF002E3E66 /* RootViewController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		426DD1A6249035DF002E3E66 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1A7249035DF002E3E66 /* DispatchQueue+SafeAsync.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		426DD1A8249035DF002E3E66 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1A9249035DF002E3E66 /* RootViewController.swift */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		426DD1B024903659002E3E66 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1B124903659002E3E66 /* ViewControllerFactory.swift */,
+				426DD1B324903667002E3E66 /* ViewModelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		426DD1BB2492604C002E3E66 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1BC2492604C002E3E66 /* Navigator.swift */,
+				426DD1BE24926084002E3E66 /* DefaultNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		426DD1C22492632B002E3E66 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1CA2492635C002E3E66 /* Users */,
+				426DD1C32492632B002E3E66 /* Posts */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		426DD1C32492632B002E3E66 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1C42492632B002E3E66 /* PostsViewController.swift */,
+				426DD1C62492633A002E3E66 /* PostsViewModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		426DD1CA2492635C002E3E66 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				426DD1CB2492635C002E3E66 /* UsersViewController.swift */,
+				426DD1CD24926373002E3E66 /* UsersViewModel.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		42CD04A5248C3E0E00ED0C80 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +227,7 @@
 		42CD04B0248C3E0E00ED0C80 /* mArtian */ = {
 			isa = PBXGroup;
 			children = (
+				426DD1A4249035DF002E3E66 /* App */,
 				42CD04DE248C42D200ED0C80 /* API */,
 				42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */,
 				42CD04BA248C3E1400ED0C80 /* Assets.xcassets */,
@@ -367,15 +462,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426DD1B824925BE9002E3E66 /* RootViewModel.swift in Sources */,
+				426DD1AD249035DF002E3E66 /* AppRootViewController.swift in Sources */,
 				42CD04ED248C440100ED0C80 /* User.swift in Sources */,
+				426DD1AB249035DF002E3E66 /* DispatchQueue+SafeAsync.swift in Sources */,
 				425757C3248D286400ED6AD6 /* ApiAdapter.swift in Sources */,
 				42CD04EC248C440100ED0C80 /* Address.swift in Sources */,
 				42CD04E6248C432500ED0C80 /* ApiParameter.swift in Sources */,
+				426DD1AC249035DF002E3E66 /* RootViewController.swift in Sources */,
 				42CD0506248CC04000ED0C80 /* ApiResult.swift in Sources */,
+				426DD1BF24926084002E3E66 /* DefaultNavigator.swift in Sources */,
 				42CD0515248D124200ED0C80 /* UrlBuilder.swift in Sources */,
 				42CD0530248D1F7B00ED0C80 /* CommentsService.swift in Sources */,
 				426DD1B624925923002E3E66 /* MartianApi.swift in Sources */,
 				42CD053B248D1FD300ED0C80 /* DefaultPostsService.swift in Sources */,
+				426DD1C72492633A002E3E66 /* PostsViewModel.swift in Sources */,
 				42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */,
 				42CD0523248D192500ED0C80 /* CommentsRepository.swift in Sources */,
 				42CD04F1248C445400ED0C80 /* Geo.swift in Sources */,
@@ -384,13 +485,19 @@
 				42CD04F3248C44A400ED0C80 /* Company.swift in Sources */,
 				42CD050E248D0F5800ED0C80 /* PostsRepository.swift in Sources */,
 				42CD051C248D140E00ED0C80 /* Post.swift in Sources */,
+				426DD1BD2492604C002E3E66 /* Navigator.swift in Sources */,
 				42CD0532248D1F8900ED0C80 /* PostsService.swift in Sources */,
+				426DD1B22490365A002E3E66 /* ViewControllerFactory.swift in Sources */,
+				426DD1B424903667002E3E66 /* ViewModelFactory.swift in Sources */,
 				42CD0525248D19BF00ED0C80 /* DefaultCommentsRepository.swift in Sources */,
+				426DD1CC2492635C002E3E66 /* UsersViewController.swift in Sources */,
+				426DD1CE24926373002E3E66 /* UsersViewModel.swift in Sources */,
 				42CD04FD248C461900ED0C80 /* UsersRepository.swift in Sources */,
 				42CD052C248D1F5800ED0C80 /* UserService.swift in Sources */,
 				42CD0539248D1FC100ED0C80 /* DefaultCommentsService.swift in Sources */,
 				42CD04F8248C457C00ED0C80 /* DefaultRepositoryFactory.swift in Sources */,
 				42CD053D248D201700ED0C80 /* DefaultServiceFactory.swift in Sources */,
+				426DD1C52492632B002E3E66 /* PostsViewController.swift in Sources */,
 				42CD0513248D0FA200ED0C80 /* Dictionary+UrlQueryItem.swift in Sources */,
 				42CD0537248D1FB100ED0C80 /* DefaultUserService.swift in Sources */,
 				425757C1248D25CE00ED6AD6 /* DefaultUserRepository.swift in Sources */,
