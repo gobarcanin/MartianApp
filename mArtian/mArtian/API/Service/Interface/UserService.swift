@@ -6,8 +6,8 @@
 //  Copyright © 2020 MartianAndMAchine. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 protocol UsersService {
-    
+    var availableUsers: Observable<[User]> { get }
 }

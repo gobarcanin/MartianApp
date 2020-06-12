@@ -16,5 +16,5 @@ struct User: ApiParameter {
     let phone: String
     let website: String
     let address: Address
-    let compant: Company
+    let company: Company
 }
