@@ -6,8 +6,8 @@
 //  Copyright © 2020 MartianAndMAchine. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 protocol PostsService {
-    
+    var currentPosts: Observable<[MappedPost]> { get }
 }

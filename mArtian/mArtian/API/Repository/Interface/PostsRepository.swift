@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol PostsRepository {
-    func fetchPosts(withPostParams params: [String: String]?) -> Observable<ApiResult<[Post], ApiError>>
+    func getPosts<T: Post>(withParams params: [String: String]?, ofType type: T.Type) -> Observable<ApiResult<[T], ApiError>>
 }

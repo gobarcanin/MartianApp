@@ -15,7 +15,7 @@ final class DefaultUsersRepository: UsersRepository {
     func fetchUsers(withUserParams params: [String: String]?) -> Observable<ApiResult<[User], ApiError>> {
         return SessionManager.default.rx
             .request(.get,
-                     UrlBuilder().set(path: ApiResources.users.path).set(parameters: params).build() ?? "",
+                     ApiResources.users.path(parameters: params) ?? "",
                      parameters: nil,
                      encoding: URLEncoding.default,
                      headers: nil)

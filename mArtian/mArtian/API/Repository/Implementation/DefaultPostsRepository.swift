@@ -12,14 +12,15 @@ import Alamofire
 import RxAlamofire
 
 final class DefaultPostsRepository: PostsRepository {
-    func fetchPosts(withPostParams params: [String: String]?) -> Observable<ApiResult<[Post], ApiError>> {
+    func getPosts<T>(withParams params: [String: String]?, ofType type: T.Type) -> Observable<ApiResult<[T], ApiError>> where T: Post {
         return SessionManager.default.rx
             .request(.get,
-                     UrlBuilder().set(path: ApiResources.posts.path).set(parameters: params).build() ?? "",
+                     ApiResources.posts.path(parameters: params)!,
                      parameters: nil,
                      encoding: URLEncoding.default,
                      headers: nil)
+            .debug()
             .responseData()
-            .expectingObject(ofType: [Post].self)
+            .expectingObject(ofType: [T].self)
     }
 }
