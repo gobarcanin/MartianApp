@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 import RxSwift
 
 enum AuthState {
@@ -15,7 +16,11 @@ enum AuthState {
 
 final class MartianApi {
     let authState: Observable<AuthState>
+    let apiAdapter: RequestAdapter = ApiAdapter()
     init() {
+
+        SessionManager.default.adapter = apiAdapter
+
         let mainFactory = DefaultServiceFactory()
         authState = .just(.session(mainFactory.services))
     }
