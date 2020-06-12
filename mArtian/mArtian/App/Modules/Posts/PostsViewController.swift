@@ -6,4 +6,24 @@
 //  Copyright © 2020 MartianAndMAchine. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class PostsViewController: BaseViewController {
+
+    let postsViewModel: PostsViewModel
+
+    init(viewModel: PostsViewModel) {
+        self.postsViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.view.backgroundColor = .cyan
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func bindViewModel() {
+        _ = postsViewModel.transform(input: PostsViewModelInput())
+    }
+    
+}

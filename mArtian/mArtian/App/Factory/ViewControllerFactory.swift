@@ -30,9 +30,9 @@ final class DefaultViewControllerFactory: ViewControllerFactory {
         guard let screen = screen as? AppScreen else { fatalError("Screen not found") }
         switch screen {
         case .posts:
-            Post
+            return PostsViewController(viewModel: viewModelFactory.postsViewModel(navigator: navigator))
         case .users:
-            
+            return UsersViewController(viewModel: viewModelFactory.usersViewModel(navigator: navigator))
         }
     }
 

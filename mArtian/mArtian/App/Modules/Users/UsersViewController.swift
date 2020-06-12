@@ -6,4 +6,20 @@
 //  Copyright © 2020 MartianAndMAchine. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class UsersViewController: BaseViewController {
+
+    let viewModel: UsersViewModel
+    
+    init(viewModel: UsersViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        self.view.backgroundColor = .green
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
