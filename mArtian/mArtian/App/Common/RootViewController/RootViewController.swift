@@ -55,7 +55,6 @@ open class RootViewController: UIViewController {
 extension RootViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
         bindViewModel()
     }
 }
