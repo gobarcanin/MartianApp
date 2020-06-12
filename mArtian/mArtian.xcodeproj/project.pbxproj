@@ -22,6 +22,7 @@
 		426DD1C72492633A002E3E66 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1C62492633A002E3E66 /* PostsViewModel.swift */; };
 		426DD1CC2492635C002E3E66 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1CB2492635C002E3E66 /* UsersViewController.swift */; };
 		426DD1CE24926373002E3E66 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1CD24926373002E3E66 /* UsersViewModel.swift */; };
+		426DD1D024926873002E3E66 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426DD1CF24926873002E3E66 /* BaseViewController.swift */; };
 		426DD1D6249402DA002E3E66 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 426DD1D5249402DA002E3E66 /* SnapKit */; };
 		42CD04B2248C3E0E00ED0C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */; };
 		42CD04BB248C3E1400ED0C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CD04BA248C3E1400ED0C80 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		426DD1C62492633A002E3E66 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		426DD1CB2492635C002E3E66 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		426DD1CD24926373002E3E66 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		426DD1CF24926873002E3E66 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = BaseViewController/BaseViewController.swift; sourceTree = "<group>"; };
 		42CD04AE248C3E0E00ED0C80 /* mArtian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mArtian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CD04B1248C3E0E00ED0C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42CD04BA248C3E1400ED0C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				426DD1A6249035DF002E3E66 /* Extension */,
 				426DD1A8249035DF002E3E66 /* RootViewController */,
+				426DD1CF24926873002E3E66 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				42CD04E6248C432500ED0C80 /* ApiParameter.swift in Sources */,
 				426DD1AC249035DF002E3E66 /* RootViewController.swift in Sources */,
 				42CD0506248CC04000ED0C80 /* ApiResult.swift in Sources */,
+				426DD1D024926873002E3E66 /* BaseViewController.swift in Sources */,
 				426DD1BF24926084002E3E66 /* DefaultNavigator.swift in Sources */,
 				42CD0515248D124200ED0C80 /* UrlBuilder.swift in Sources */,
 				42CD0530248D1F7B00ED0C80 /* CommentsService.swift in Sources */,
