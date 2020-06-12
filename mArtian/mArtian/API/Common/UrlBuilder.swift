@@ -7,6 +7,13 @@
 //
 import Foundation
 
+enum UrlBuilderComponent {
+    case scheme(String?)
+    case host(String?)
+    case path(String?)
+    case parameters([String: String]?)
+}
+
 final class UrlBuilder {
     private var components: URLComponents
 
@@ -14,19 +21,33 @@ final class UrlBuilder {
         self.components = URLComponents()
     }
 
-    func set(path: String) -> UrlBuilder {
-        self.components.path = path
-        return self
-    }
-
-    func set(parameters: [String: String]?) -> UrlBuilder {
-        if let parameters = parameters {
+    func set(component: UrlBuilderComponent) -> UrlBuilder {
+        switch component {
+        case .scheme(let scheme):
+            guard let scheme = scheme else { return self }
+            self.components.scheme = scheme
+            return self
+        case .host(let host):
+            guard let host = host else { return self }
+            self.components.host = host
+            return self
+        case .path(let path):
+            guard let path = path else { return self }
+            self.components.path = path
+            return self
+        case .parameters(let parameters):
+            guard let parameters = parameters else { return self }
             self.components.queryItems = parameters.queryItems
+            return self
         }
-        return self
     }
 
     func build() -> URL? {
-        return self.components.url
+        do {
+            let url = try self.components.asURL()
+            return url
+        } catch {
+            return nil
+        }
     }
 }

@@ -15,22 +15,40 @@ enum ApiResources: String {
     case albums
     case todos
 
-    var path: String {
+    func path(parameters: [String: String]?) -> URL? {
+        let builder = UrlBuilder()
+            .set(component: .scheme(API.scheme))
+            .set(component: .host(API.host))
         switch self {
-        case .users: return ApiPaths.users
-        case .posts: return ApiPaths.posts
-        case .comments: return ApiPaths.comments
-        case .albums: return ApiPaths.albums
-        case .todos: return ApiPaths.todos
+        case .users:
+            _ = builder.set(component: .path(API.Endpoint.users))
+            break
+        case .posts:
+            _ = builder.set(component: .path(API.Endpoint.posts))
+            break
+        case .comments:
+            _ = builder.set(component: .path(API.Endpoint.comments))
+            break
+        case .albums:
+            _ = builder.set(component: .path(API.Endpoint.users))
+            break
+        case .todos:
+            _ = builder.set(component: .path(API.Endpoint.todos))
+            break
         }
+        _ = builder.set(component: .parameters(parameters))
+        return builder.build()
     }
 }
 
-private struct ApiPaths {
-    private static let baseUrl = "https://demo.martian.services/api/"
-    static let users: String = "\(baseUrl)/users"
-    static let posts: String = "\(baseUrl)/posts"
-    static let comments: String = "\(baseUrl)/comments"
-    static let albums: String = "\(baseUrl)/albums"
-    static let todos: String = "\(baseUrl)/todos"
+private struct API {
+    static let scheme = "https"
+    static let host = "demo.martian.services"
+    struct Endpoint {
+        static let users: String = "/api/users"
+        static let posts: String = "/api/posts"
+        static let comments: String = "/api/comments"
+        static let albums: String = "/api/albums"
+        static let todos: String = "/api/todos"
+    }
 }
