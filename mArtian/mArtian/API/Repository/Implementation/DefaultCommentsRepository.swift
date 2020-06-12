@@ -15,7 +15,7 @@ final class DefaultCommentsRepository: CommentsRepository {
     func fetchComments(withParams params: [String: String]?) -> Observable<ApiResult<[Comment], ApiError>> {
         return SessionManager.default.rx
             .request(.get,
-                     UrlBuilder().set(path: ApiResources.posts.path).set(parameters: params).build() ?? "",
+                     ApiResources.comments.path(parameters: params)!,
                      parameters: nil,
                      encoding: URLEncoding.default,
                      headers: nil)
