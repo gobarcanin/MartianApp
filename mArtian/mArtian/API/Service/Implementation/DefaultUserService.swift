@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import Logger
 
 final class DefaultUsersService: UsersService {
     private let usersRepository: UsersRepository
