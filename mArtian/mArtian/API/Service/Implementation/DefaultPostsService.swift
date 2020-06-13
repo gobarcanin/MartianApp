@@ -27,7 +27,7 @@ final class DefaultPostsService: PostsService {
                 case .failure(_): throw ApiError.someError("[DefaultPostsService] Error fetching posts")
                 }
             }
-            .share(replay: 1)
+            .share()
 
         currentPosts = Observable.combineLatest(
             availablePosts,

@@ -7,13 +7,33 @@
 //
 
 import RxSwift
+import RxDataSources
+
+struct PostsDataModel: Equatable {
+    let name: String?
+    let username: String?
+    let post: String?
+}
+
+struct SectionOfPostsModel {
+    var items: [Item]
+}
+
+extension SectionOfPostsModel: SectionModelType {
+    typealias Item = PostsDataModel
+
+    init(original: Self, items: [Self.Item]) {
+        self = original
+        self.items = items
+    }
+}
 
 struct PostsViewModelInput {
 
 }
 
 struct PostsViewModelOutput {
-
+    let posts: Observable<[SectionOfPostsModel]>
 }
 
 protocol PostsViewModel {
@@ -31,10 +51,11 @@ final class DefaultPostsViewModel: PostsViewModel {
 
     func transform(input: PostsViewModelInput) -> PostsViewModelOutput {
         disposeBag = DisposeBag()
-        self.postsService
+        let postsModel = self.postsService
             .currentPosts
-            .subscribe(onNext: { _ in })
-            .disposed(by: disposeBag)
-        return PostsViewModelOutput()
+            .map { $0.map { PostsDataModel(name: $0.user?.name, username: $0.user?.username, post: $0.body) } }
+            .map { [SectionOfPostsModel.init(items: $0)] }
+
+        return PostsViewModelOutput(posts: postsModel)
     }
 }

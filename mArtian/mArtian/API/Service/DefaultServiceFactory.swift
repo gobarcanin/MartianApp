@@ -33,7 +33,7 @@ final class DefaultServiceFactory: ServiceFactory {
     init() {
         self.repositoryFactory = DefaultRepositoryFactory()
         self.usersService = DefaultUsersService(usersRepository: repositoryFactory.usersRepository)
-        self.postsService = DefaultPostsService(userService: usersService, postsRepository: repositoryFactory.postsRepository)
         self.commentsService = DefaultCommentsService(commentsRepository: repositoryFactory.commentsRepository)
+        self.postsService = DefaultPostsService(userService: usersService, postsRepository: repositoryFactory.postsRepository)
     }
 }

@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import RxDataSources
+import RxSwift
 
 final class PostsViewController: BaseViewController {
 
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
+        return tableView
+    }()
+
+    private typealias DataSource = RxTableViewSectionedReloadDataSource<SectionOfPostsModel>
+    private var disposeBag: DisposeBag!
     let postsViewModel: PostsViewModel
 
     init(viewModel: PostsViewModel) {
@@ -23,7 +33,29 @@ final class PostsViewController: BaseViewController {
     }
 
     override func bindViewModel() {
-        _ = postsViewModel.transform(input: PostsViewModelInput())
+        disposeBag = DisposeBag()
+        let output = postsViewModel.transform(input: PostsViewModelInput())
+        let datasource = DataSource(
+            configureCell: { dataSource, tableView, indexPath, item in
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as? PostTableViewCell else { fatalError("Missing cell type") }
+                cell.model = item
+                return cell
+            })
+
+        _ = output
+            .posts
+            .bind(to: tableView.rx.items(dataSource: datasource))
+            .disposed(by: disposeBag)
+
     }
-    
+
+    override func addSubviews() {
+        view.addSubview(tableView)
+    }
+
+    override func makeConstraints() {
+        tableView.snp.makeConstraints { make in
+            make.bottom.trailing.leading.top.equalTo(0)
+        }
+    }
 }
