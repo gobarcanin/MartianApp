@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol CommentsRepository {
-    func fetchComments(withParams params: [String: String]?) -> Observable<ApiResult<[Comment], ApiError>>
+    func getComments(withParams params: [String: String]?) -> Observable<ApiResult<[Comment], ApiError>>
 }

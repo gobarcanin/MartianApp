@@ -12,7 +12,7 @@ import Alamofire
 import RxAlamofire
 
 final class DefaultCommentsRepository: CommentsRepository {
-    func fetchComments(withParams params: [String: String]?) -> Observable<ApiResult<[Comment], ApiError>> {
+    func getComments(withParams params: [String: String]?) -> Observable<ApiResult<[Comment], ApiError>> {
         return SessionManager.default.rx
             .request(.get,
                      ApiResources.comments.path(parameters: params)!,
